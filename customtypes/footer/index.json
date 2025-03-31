@@ -1,0 +1,105 @@
+{
+  "format": "custom",
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "footer_links": {
+        "type": "Group",
+        "config": {
+          "label": "Footer Links",
+          "repeat": true,
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            }
+          }
+        }
+      },
+      "support_emails": {
+        "type": "Group",
+        "config": {
+          "label": "Support Emails",
+          "repeat": true,
+          "fields": {
+            "email_address": {
+              "type": "Text",
+              "config": {
+                "label": "Email Address",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "social_links": {
+        "type": "Group",
+        "config": {
+          "label": "Social Links",
+          "repeat": true,
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            },
+            "social_icon": {
+              "type": "Image",
+              "config": {
+                "label": "Social Icon",
+                "constraint": {
+                  "width": 80,
+                  "height": 80
+                },
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "office_addresses": {
+        "type": "Group",
+        "config": {
+          "label": "Office addresses",
+          "repeat": true,
+          "fields": {
+            "flag": {
+              "type": "Image",
+              "config": {
+                "label": "Flag",
+                "constraint": {
+                  "width": 50,
+                  "height": 50
+                },
+                "thumbnails": []
+              }
+            },
+            "address": {
+              "type": "Text",
+              "config": {
+                "label": "Address",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

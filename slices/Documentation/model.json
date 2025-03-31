@@ -1,0 +1,52 @@
+{
+  "id": "documentation",
+  "type": "SharedSlice",
+  "name": "Documentation",
+  "description": "Documentation",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "documentation_link": {
+          "type": "Link",
+          "config": {
+            "label": "Documentation Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "documentation_illustration": {
+          "type": "Image",
+          "config": {
+            "label": "Documentation Illustration",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

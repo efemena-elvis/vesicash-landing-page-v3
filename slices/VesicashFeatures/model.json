@@ -1,0 +1,71 @@
+{
+  "id": "vesicash_features",
+  "type": "SharedSlice",
+  "name": "VesicashFeatures",
+  "description": "VesicashFeatures",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "illustration": {
+          "type": "Image",
+          "config": {
+            "label": "Illustration",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "features": {
+          "type": "Group",
+          "config": {
+            "label": "Features",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "subtitle": {
+                "type": "Text",
+                "config": {
+                  "label": "Subtitle",
+                  "placeholder": ""
+                }
+              },
+              "illustration": {
+                "type": "Image",
+                "config": {
+                  "label": "Illustration",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "theme": {
+                "type": "Select",
+                "config": {
+                  "label": "Theme",
+                  "placeholder": "Controls the color gradient of each card",
+                  "options": [
+                    "blue",
+                    "green",
+                    "bluish"
+                  ],
+                  "default_value": "blue"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
