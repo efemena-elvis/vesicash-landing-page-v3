@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  AWS_REGION: ${{ secrets.AWS_DEFAULT_REGION || 'us-east-1' }}
+  AWS_REGION: ${{ secrets.AWS_DEFAULT_REGION || 'us-east-2' }}
   S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
   CLOUDFRONT_DISTRIBUTION: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION }}
   PNPM_VERSION: 9
@@ -73,7 +73,7 @@ jobs:
         run: pnpm generate
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: nuxt-build
           path: .output/public/
@@ -86,7 +86,7 @@ jobs:
 
     steps:
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: nuxt-build
           path: .output/public/
