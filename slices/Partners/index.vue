@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import AutoScrollCarousel from "@/components/auto-scroll-carousel.vue";
 import type { Content } from "@prismicio/client";
 defineProps(
   getSliceComponentProps<Content.PartnersSlice>([
@@ -25,14 +26,20 @@ defineProps(
       >
         {{ slice.primary.subtitle }}
       </p>
-      <div class="flex flex-wrap gap-6 justify-center">
+      <AutoScrollCarousel wrapper-classes="justify-between">
         <PrismicImage
-          v-for="(logo, index) in slice.primary.logos"
+          v-for="(logo, index) in [
+            ...slice.primary.logos,
+            ...slice.primary.logos,
+          ]"
           :key="logo?.logo?.id ?? '' + index"
           :field="logo.logo"
-          class="object-contain"
+          class="object-contain px-6"
         />
-      </div>
+      </AutoScrollCarousel>
+      <!-- <div class="flex flex-wrap gap-6 justify-center">
+       
+      </div> -->
     </div>
   </section>
 </template>
