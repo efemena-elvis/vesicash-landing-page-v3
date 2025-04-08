@@ -70,7 +70,7 @@
         <div class="text-muted-foreground text-s flex gap-x-1 items-center">
           <span>A member of</span>
           <NuxtImg src="/images/stellar.png" class="h-auto w-[55px]" />
-          <span>network</span>
+          <span class="text-sm">network</span>
         </div>
       </div>
     </div>
