@@ -46,7 +46,7 @@ defineProps(
       <div
         class="w-full mt-10 md:mt-0 md:absolute md:bottom-4 md:right-[2%] hidden md:block"
         :style="{
-          transform: `translateY(${slice.primary.position_offset ?? 0}px)`,
+          transform: `translate(-55px, ${slice.primary.position_offset ?? 0}px)`,
         }"
       >
         <PrismicImage

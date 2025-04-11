@@ -21,7 +21,7 @@ defineProps(
     <div
       class="container flex gap-6 justify-center md:justify-between items-start"
     >
-      <div class="w-[342px] hidden md:block">
+      <div class="w-[342px] hidden md:block sticky top-[calc(50vh-150px)]">
         <PrismicImage
           :field="slice.primary.illustration"
           class="object-cover"

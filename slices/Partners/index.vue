@@ -26,20 +26,17 @@ defineProps(
       >
         {{ slice.primary.subtitle }}
       </p>
-      <AutoScrollCarousel wrapper-classes="justify-between">
-        <PrismicImage
-          v-for="(logo, index) in [
-            ...slice.primary.logos,
-            ...slice.primary.logos,
-          ]"
-          :key="logo?.logo?.id ?? '' + index"
-          :field="logo.logo"
-          class="object-contain px-6"
-        />
-      </AutoScrollCarousel>
-      <!-- <div class="flex flex-wrap gap-6 justify-center">
-       
-      </div> -->
     </div>
+    <AutoScrollCarousel wrapper-classes="justify-between">
+      <PrismicImage
+        v-for="(logo, index) in [
+          ...slice.primary.logos,
+          ...slice.primary.logos,
+        ]"
+        :key="logo?.logo?.id ?? '' + index"
+        :field="logo.logo"
+        class="object-cover px-6"
+      />
+    </AutoScrollCarousel>
   </section>
 </template>
