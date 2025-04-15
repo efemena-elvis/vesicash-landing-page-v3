@@ -26,7 +26,7 @@
               @click="mor_opened = !mor_opened"
             >
               <div class="font-semibold font-roobert-semibold text-[#011A27]">
-                Merchant of Records
+                Merchant of Record
               </div>
               <div class="text-muted-foreground text-sm">
                 Secure structure for managing financial transactions.
