@@ -4,7 +4,7 @@
     <div class="fixed left-0 right-0 bg-background z-50 border-b">
       <Navigation />
     </div>
-    <div class="pt-20">
+    <div class="pt-[70px]">
       <NuxtPage />
     </div>
     <Footer />

@@ -190,13 +190,8 @@
     </div>
 
     <div class="space-y-8 mt-10">
-      <NuxtLink
-        class="w-full block"
-        to="https://app.vesicash.com/login"
-        external
-        target="_blank"
-      >
-        <Button class="w-full" :variant="'outline'"> Sign in </Button>
+      <NuxtLink class="w-full block" to="/contact" @click="$emit('close')">
+        <Button class="w-full" :variant="'outline'"> Contact Support </Button>
       </NuxtLink>
       <!-- <NuxtLink class="w-full block">
         <Button class="w-full"> Contact sales </Button>
@@ -218,6 +213,7 @@ const products_opened = ref(false);
 const mor_opened = ref(false);
 const escrow_opened = ref(false);
 const resources_opened = ref(false);
+defineEmits(["close"]);
 
 const toggleProducts = () => {
   products_opened.value = !products_opened.value;

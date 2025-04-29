@@ -53,13 +53,13 @@
       </NuxtLink> -->
 
       <div class="flex gap-x-3">
-        <NuxtLink to="https://app.vesicash.com/login" external target="_blank">
+        <NuxtLink to="/contact">
           <Button
             class="hidden md:inline-flex"
             :variant="'outline'"
             :size="'lg'"
           >
-            Sign in
+            Contact Support
           </Button>
         </NuxtLink>
         <!-- <NuxtLink>

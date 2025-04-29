@@ -29,12 +29,15 @@ defineProps(
         <p class="text-[#D5DDDC] text-2xl">
           {{ slice.primary.subtitle }}
         </p>
-        <PrismicLink
+        <NuxtLink to="/contact" :class="buttonVariants({ variant: 'outline' })">
+          {{ slice.primary.booking_link.text }}
+        </NuxtLink>
+        <!-- <PrismicLink
           :field="slice.primary.booking_link"
           :class="buttonVariants({ variant: 'outline' })"
         >
           {{ slice.primary.booking_link.text }}
-        </PrismicLink>
+        </PrismicLink> -->
       </div>
     </div>
   </section>
