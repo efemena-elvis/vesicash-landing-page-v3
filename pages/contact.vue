@@ -18,7 +18,7 @@
     <div class="container py-[60px]">
       <div class="grid md:grid-cols-[2fr,_3fr] gap-10 mt-10 md:px-10">
         <div class="space-y-4">
-          <div class="p-6 rounded-2xl bg-accent/90 flex gap-x-4">
+          <div class="p-6 rounded-2xl bg-accent/90 flex gap-x-4" v-if="false">
             <div
               class="size-16 bg-primary/10 rounded-full grid place-items-center"
             >
