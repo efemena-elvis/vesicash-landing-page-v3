@@ -130,9 +130,12 @@ const handleMessageSubmission = async (event: Event) => {
   event.preventDefault();
   const form = event.target as HTMLFormElement;
   const formData = new FormData(form);
+  const [first_name, last_name] = (formData.get("fullname") as string)
+    .trim()
+    .split(/\s+/);
   const payload = {
-    first_name: formData.get("fullname"),
-    last_name: "_",
+    first_name,
+    last_name: last_name ?? "_",
     email: formData.get("email"),
     website_url: "https://vesicash.com",
     business_type: "ecommerce",
@@ -144,7 +147,7 @@ const handleMessageSubmission = async (event: Event) => {
     sending.value = true;
     sent.value = false;
     const response = await $fetch(
-      "https://auth.platform.vesicash.com/v2/contact-us",
+      "https://auth-staging.vesicash.com/v2/contact-us",
       { method: "post", body: payload }
     );
     sending.value = false;
