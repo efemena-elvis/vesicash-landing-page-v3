@@ -139,7 +139,7 @@ const handleMessageSubmission = async (event: Event) => {
     email: formData.get("email"),
     website_url: "https://vesicash.com",
     business_type: "ecommerce",
-    country: "Nigeira",
+    country: "Nigeriaa",
     message: formData.get("message"),
   };
 

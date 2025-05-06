@@ -27,10 +27,15 @@ defineProps(
         </div>
         <h1
           class="text-[40px] leading-[48px] md:text-[64px] md:leading-[72px] font-roobert-semibold font-semibold"
+          data-aos="fade-up"
         >
           {{ slice.primary.title }}
         </h1>
-        <p class="text-[#525857] text-xl md:text-2xl">
+        <p
+          class="text-[#525857] text-xl md:text-2xl"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           {{ slice.primary.subtitle }}
         </p>
 
@@ -38,6 +43,8 @@ defineProps(
           :class="buttonVariants()"
           v-if="slice.variation === 'default'"
           :field="slice.primary.get_started_link"
+          data-aos="fade-up"
+          data-aos-delay="400"
         >
           {{ slice.primary.get_started_link.text }}
         </PrismicLink>
@@ -52,6 +59,8 @@ defineProps(
         <PrismicImage
           :field="slice.primary.hero_illustration"
           class="object-cover md:object-contain md:object-right md:ml-auto w-full max-h-[250px] lg:max-h-[300px]"
+          data-aos="fade-left"
+          data-aos-delay="20"
         />
       </div>
 
@@ -61,6 +70,8 @@ defineProps(
         <PrismicImage
           :field="slice.primary.hero_illustration"
           class="object-cover md:object-contain md:object-right md:ml-auto w-full max-h-[250px] lg:max-h-[300px]"
+          data-aos="fade-left"
+          data-aos-delay="200"
         />
       </div>
     </div>

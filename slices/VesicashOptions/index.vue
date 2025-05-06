@@ -23,6 +23,7 @@ defineProps(
         class="bg-[#F5F6F7] rounded-3xl"
         v-for="(option, index) in slice.primary.options"
         :key="option?.title ?? '' + index"
+        :data-aos="index % 2 == 0 ? 'fade-right' : 'fade-left'"
       >
         <div class="aspect-video max-h-[350px]">
           <PrismicImage

@@ -18,11 +18,15 @@ defineProps(
     class="py-[54px]"
   >
     <div class="container">
-      <h2 class="text-4xl font-roobert-semibold font-semibold text-center">
+      <h2
+        class="text-4xl font-roobert-semibold font-semibold text-center"
+        data-aos="fade-down"
+      >
         {{ slice.primary.title }}
       </h2>
       <p
         class="text-xl text-muted-foreground mt-6 mb-10 text-center max-w-[641px] mx-auto"
+        data-aos="fade-up"
       >
         {{ slice.primary.subtitle }}
       </p>

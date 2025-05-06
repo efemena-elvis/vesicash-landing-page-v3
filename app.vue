@@ -21,6 +21,20 @@ useHead({
       rel: "canonical",
       href: "https://vesicash.com",
     },
+    {
+      href: "https://unpkg.com/aos@next/dist/aos.css",
+      rel: "stylesheet",
+    },
+  ],
+  script: [
+    {
+      src: "https://unpkg.com/aos@next/dist/aos.js",
+      onload() {
+        AOS?.init({
+          duration: 800,
+        });
+      },
+    },
   ],
 });
 </script>

@@ -34,6 +34,7 @@ defineProps(
             slice.primary.illustration_position === 'left' && 'lg:order-2'
           )
         "
+        data-aos="fade-up"
       >
         <h3
           class="font-roobert-semibold font-semibold text-4xl text-center lg:text-left"
@@ -51,6 +52,7 @@ defineProps(
             slice.primary.illustration_position === 'left' && 'lg:order-1'
           )
         "
+        data-aos="zoom-in"
       >
         <PrismicImage
           :field="slice.primary.illustration"

@@ -21,7 +21,11 @@ defineProps(
     <div
       class="container flex gap-6 justify-center md:justify-between items-start"
     >
-      <div class="w-[342px] hidden md:block sticky top-[calc(50vh-150px)]">
+      <div
+        class="w-[342px] hidden md:block sticky top-[calc(50vh-150px)]"
+        data-aos="zoom-in"
+        data-aos-anchor-placement="top-bottom"
+      >
         <PrismicImage
           :field="slice.primary.illustration"
           class="object-cover"
@@ -32,6 +36,8 @@ defineProps(
           class="w-full max-w-[545px]"
           v-for="(feature, index) in slice.primary.features"
           :key="index"
+          data-aos="fade-up"
+          :data-aos-delay="index * 50"
         >
           <div
             :class="

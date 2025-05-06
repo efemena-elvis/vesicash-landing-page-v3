@@ -28,7 +28,7 @@ defineProps(
         )
       "
     >
-      <div class="space-y-6 max-w-[835px]">
+      <div class="space-y-6 max-w-[835px]" data-aos="fade-left">
         <h4 class="font-roobert-semibold font-semibold text-4xl">
           {{ slice.primary.title }}
         </h4>
@@ -46,6 +46,8 @@ defineProps(
         >
           <div
             class="grid place-items-center size-[70px] rounded-full bg-background ring ring-muted"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
             <PrismicImage
               :field="option.icon"
@@ -53,10 +55,14 @@ defineProps(
             />
           </div>
           <div class="space-y-2">
-            <h3 class="font-roobert-semibold font-semibold text-2xl">
+            <h3
+              class="font-roobert-semibold font-semibold text-2xl"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
               {{ option.title }}
             </h3>
-            <p class="text-xl text-[#696F6E]">
+            <p class="text-xl text-[#696F6E]" data-aos="fade-up">
               {{ option.subtitle }}
             </p>
           </div>

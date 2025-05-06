@@ -24,6 +24,8 @@ defineProps(
     >
       <div
         class="bg-[#F5F6F7] rounded-3xl grid place-items-center min-h-[358px] p-6"
+        data-aos="fade-right"
+        data-aos-delay="20"
       >
         <div>
           <h3 class="text-4xl font-roobert-semibold font-semibold">
@@ -44,9 +46,11 @@ defineProps(
         </div>
       </div>
 
-      <Spearhead class="block mx-auto relative rotate-90 lg:rotate-0" />
+      <div class="block mx-auto" data-aos="fade-right" data-aos-delay="10">
+        <Spearhead class="relative rotate-90 lg:rotate-0" />
+      </div>
 
-      <div>
+      <div data-aos="fade-right">
         <PrismicImage
           :field="slice.primary.documentation_illustration"
           class="object-center object-contain mx-auto"
