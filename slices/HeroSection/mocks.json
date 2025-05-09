@@ -99,6 +99,15 @@
 				"__TYPE__": "FieldContent",
 				"value": "58",
 				"type": "Number"
+			},
+			"get_started_link": {
+				"__TYPE__": "LinkContent",
+				"key": "c40e6923-127b-4be8-bc41-4e2ed786202d",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "matter"
+				}
 			}
 		},
 		"items": [

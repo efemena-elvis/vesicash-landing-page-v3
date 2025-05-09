@@ -41,7 +41,7 @@ defineProps(
 
         <PrismicLink
           :class="buttonVariants()"
-          v-if="slice.variation === 'default'"
+          v-if="slice.primary.get_started_link"
           :field="slice.primary.get_started_link"
           data-aos="fade-up"
           data-aos-delay="400"

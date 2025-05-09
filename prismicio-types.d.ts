@@ -635,6 +635,16 @@ export interface HeroSectionSliceTaggedPrimary {
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   position_offset: prismic.NumberField;
+
+  /**
+   * Get Started Link field in *HeroSection → Tagged → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_section.tagged.primary.get_started_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  get_started_link: prismic.LinkField;
 }
 
 /**

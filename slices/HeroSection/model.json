@@ -98,6 +98,17 @@
             "label": "Position Offset",
             "placeholder": "Controls to top-to-down position of the illustration"
           }
+        },
+        "get_started_link": {
+          "type": "Link",
+          "config": {
+            "label": "Get Started Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
         }
       },
       "items": {}
