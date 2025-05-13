@@ -37,14 +37,15 @@
         </div>
         <div
           class="space-y-6"
-          v-for="(links, index) in groupedLinks"
-          :key="index"
+          v-for="(links, group) of groupedLinks"
+          :key="group"
         >
+          <div class="font-bold">{{ group }}</div>
           <PrismicLink
-            v-for="(link, i) in links"
+            v-for="(link, i) in links.filter(Boolean)"
             :key="i"
             :field="link.link"
-            class="block text-[#171918] cursor-pointer"
+            class="block text-[#171918] cursor-pointer hover:text-primary hover:underline text-muted-foreground"
           >
             <span class="hover:underline"> {{ link.link.text }}</span>
           </PrismicLink>
@@ -87,6 +88,10 @@
 
 <script lang="ts" setup>
 import StellarIcon from "@/assets/svgs/stellar.svg";
+import type {
+  FooterDocumentDataFooterLinksItem,
+  Simplify,
+} from "@/prismicio-types";
 const { client } = usePrismic();
 
 const { data } = useAsyncData("footer", () => {
@@ -99,12 +104,23 @@ const addresses = computed(() => {
 
 const groupedLinks = computed(() => {
   const links = data.value?.data?.footer_links ?? [];
-  const chunks = [];
-  const chunk_size = 4;
-  for (let i = 0; i < links.length; i += chunk_size) {
-    chunks.push(links.slice(i, i + chunk_size));
-  }
-  return chunks;
+  let currentGroup = "";
+  return links.reduce(
+    (acc, link) => {
+      if (link.link.link_type === "Any") {
+        currentGroup = link.link.text ?? "";
+      }
+      if (link.link.link_type !== "Any" && currentGroup) {
+        if (acc[currentGroup]) {
+          acc[currentGroup].push(link);
+        } else {
+          acc[currentGroup] = [link];
+        }
+      }
+      return acc;
+    },
+    {} as { [key: string]: Simplify<FooterDocumentDataFooterLinksItem>[] }
+  );
 });
 
 const socialLinks = computed(() => {
