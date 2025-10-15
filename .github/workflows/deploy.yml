@@ -2,7 +2,7 @@ name: Nuxt.js S3/CloudFront Deployment
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 env:
   AWS_REGION: ${{ secrets.AWS_DEFAULT_REGION || 'us-east-2' }}
@@ -14,7 +14,7 @@ jobs:
   install:
     name: Install dependencies
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,18 +27,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'pnpm'
+          node-version: "18"
+          cache: "pnpm"
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Clean install
+        run: |
+          rm -rf node_modules pnpm-lock.yaml
+          pnpm install --frozen-lockfile=false
 
-      - name: Cache node modules
+      - name: Cache pnpm store
         uses: actions/cache@v3
         with:
-          path: |
-            ~/.pnpm-store
-            node_modules
+          path: ~/.pnpm-store
           key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
 
   build:
@@ -58,16 +58,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'pnpm'
+          node-version: "18"
+          cache: "pnpm"
 
-      - name: Restore cache
+      - name: Restore pnpm store
         uses: actions/cache@v3
         with:
-          path: |
-            ~/.pnpm-store
-            node_modules
+          path: ~/.pnpm-store
           key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+
+      - name: Clean install
+        run: |
+          rm -rf node_modules pnpm-lock.yaml
+          pnpm install --frozen-lockfile=false
 
       - name: Build Nuxt.js
         run: pnpm generate
