@@ -8,7 +8,7 @@
     ]"
   >
     <div
-      class="container grid grid-cols-[185px_1fr_auto] gap-8 items-center mx-auto py-2 px-4 md:py-4 md:px-8"
+      class="container grid grid-cols-[125px_1fr_auto] gap-2 items-center mx-auto py-2 px-4 md:py-4 md:px-8 text-xs sm:text-base"
     >
       <NuxtLink to="/" class="shrink-0">
         <img
@@ -20,7 +20,7 @@
       <div>
         <div
           :class="[
-            'p-1.5 md:p-2 text-sm md:text-base inline-flex gap-1 rounded-full border border-gray-300',
+            'p-1.5 md:p-2 text-xs md:text-base inline-flex gap-1 rounded-full border border-gray-300',
             view === 'payment' ? '_bg-[#EAEEF0]' : '_bg-blue-400/90',
           ]"
         >
@@ -50,7 +50,9 @@
         </div>
       </div>
       <NuxtLink to="/contact">
-        <button class="btn">Contact Sales</button>
+        <button class="btn">
+          Contact <span class="hidden sm:inline">Sales</span>
+        </button>
       </NuxtLink>
     </div>
   </header>
