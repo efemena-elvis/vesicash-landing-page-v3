@@ -8,7 +8,7 @@
     ]"
   >
     <div
-      class="container grid grid-cols-[125px_1fr_auto] gap-2 items-center mx-auto py-2 px-4 md:py-4 md:px-8 text-xs sm:text-base"
+      class="container grid grid-cols-[125px_1fr] sm:grid-cols-[125px_1fr_auto] gap-4 items-center mx-auto py-2 px-4 md:py-4 md:px-8 text-xs sm:text-base"
     >
       <NuxtLink to="/" class="shrink-0">
         <img
@@ -17,7 +17,7 @@
           class="shrink-0"
         />
       </NuxtLink>
-      <div>
+      <div class="flex justify-end sm:justify-start">
         <div
           :class="[
             'p-1.5 md:p-2 text-xs md:text-base inline-flex gap-1 rounded-full border border-gray-300',
@@ -49,7 +49,7 @@
           </div>
         </div>
       </div>
-      <NuxtLink to="/contact">
+      <NuxtLink to="/contact" class="hidden sm:block">
         <button class="btn">
           Contact <span class="hidden sm:inline">Sales</span>
         </button>
