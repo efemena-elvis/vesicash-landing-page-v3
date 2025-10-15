@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
+
+@layer components {
+  .btn {
+    @apply rounded-full bg-[#3AB75D] text-white font-medium px-4 py-3 text-sm cursor-pointer;
+  }
+}
+
+@layer base {
+  .input-control {
+    @apply flex h-11 w-full rounded-md border border-gray-200 bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-gray-900 placeholder:text-gray-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3AB75D] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm;
+  }
+
+  .textarea-control {
+    @apply flex min-h-[60px] w-full rounded-md border border-gray-200 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-gray-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#3AB75D] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm;
+  }
+
+  .form-label {
+    @apply text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
+  }
+
+  .heading h1,
+  .heading h1 span {
+    @apply text-[40px] leading-[48px] md:text-[48px] md:leading-[66px] font-semibold;
+  }
+}
