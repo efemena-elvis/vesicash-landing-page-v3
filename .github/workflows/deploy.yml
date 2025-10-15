@@ -8,7 +8,7 @@ env:
   AWS_REGION: ${{ secrets.AWS_DEFAULT_REGION || 'us-east-2' }}
   S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_NAME }}
   CLOUDFRONT_DISTRIBUTION: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION }}
-  PNPM_VERSION: 8
+  PNPM_VERSION: 9
 
 jobs:
   install:
