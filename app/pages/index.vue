@@ -16,7 +16,9 @@
               compliance, and tax operations across the continent, giving you
               seamless access to every market.
             </p>
-            <button class="btn">Get Started</button>
+            <nuxt-link to="/contact">
+              <button class="btn">Get Started</button>
+            </nuxt-link>
           </div>
           <div class="w-full aspect-[0.95]">
             <img
